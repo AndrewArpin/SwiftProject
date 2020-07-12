@@ -5,14 +5,33 @@
 //  Created by Andrew Arpin on 2020-07-12.
 //  Copyright © 2020 Andrew Arpin. All rights reserved.
 //
-
+import CoreData
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    lazy var persistantContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "NoteData")
+        container.loadPersistentStores { (description, error) in
+            if let error = error {
+                print("There is an error on the persistance: \(error.localizedDescription)")
+            }
+        }
+        
+        return container
+    }()
 
-
+    func saveContext() {
+        let context = persistantContainer.viewContext
+        if context.hasChanges {
+            do {
+                try context.save()
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+    }
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

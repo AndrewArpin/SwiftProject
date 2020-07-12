@@ -16,6 +16,14 @@
 		E938DD8224BBBEA2000459CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E938DD8024BBBEA2000459CE /* LaunchScreen.storyboard */; };
 		E938DD8D24BBBEA2000459CE /* Note_ApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938DD8C24BBBEA2000459CE /* Note_ApplicationTests.swift */; };
 		E938DD9824BBBEA2000459CE /* Note_ApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938DD9724BBBEA2000459CE /* Note_ApplicationUITests.swift */; };
+		E938DDAC24BBBFF1000459CE /* NoteDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E938DDAA24BBBFF1000459CE /* NoteDataModel.xcdatamodeld */; };
+		E938DDAE24BBC00B000459CE /* NoteStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938DDAD24BBC00B000459CE /* NoteStorage.swift */; };
+		E938DDB024BBC03C000459CE /* NoteDateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938DDAF24BBC03C000459CE /* NoteDateHelper.swift */; };
+		E938DDB324BBC051000459CE /* NoteCoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938DDB224BBC051000459CE /* NoteCoreDataHelper.swift */; };
+		E938DDB624BBC373000459CE /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938DDB524BBC373000459CE /* DateExtensions.swift */; };
+		E938DDB824BBC545000459CE /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938DDB724BBC545000459CE /* Note.swift */; };
+		E938DDBC24BBCC65000459CE /* NoteUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E938DDBA24BBCC65000459CE /* NoteUITableViewCell.swift */; };
+		E938DDBD24BBCC65000459CE /* NoteUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E938DDBB24BBCC65000459CE /* NoteUITableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +59,14 @@
 		E938DD9324BBBEA2000459CE /* Note ApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Note ApplicationUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E938DD9724BBBEA2000459CE /* Note_ApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note_ApplicationUITests.swift; sourceTree = "<group>"; };
 		E938DD9924BBBEA2000459CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E938DDAB24BBBFF1000459CE /* NoteDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoteDataModel.xcdatamodel; sourceTree = "<group>"; };
+		E938DDAD24BBC00B000459CE /* NoteStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStorage.swift; sourceTree = "<group>"; };
+		E938DDAF24BBC03C000459CE /* NoteDateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDateHelper.swift; sourceTree = "<group>"; };
+		E938DDB224BBC051000459CE /* NoteCoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCoreDataHelper.swift; sourceTree = "<group>"; };
+		E938DDB524BBC373000459CE /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		E938DDB724BBC545000459CE /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		E938DDBA24BBCC65000459CE /* NoteUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteUITableViewCell.swift; sourceTree = "<group>"; };
+		E938DDBB24BBCC65000459CE /* NoteUITableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoteUITableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +117,18 @@
 		E938DD7224BBBEA1000459CE /* Note Application */ = {
 			isa = PBXGroup;
 			children = (
+				E938DDB924BBCC3B000459CE /* ViewControllers */,
+				E938DDA724BBBF7C000459CE /* Storage */,
+				E938DDA624BBBF6B000459CE /* Models */,
+				E938DDA524BBBF51000459CE /* CoreDataModel */,
+				E938DDA924BBBF9A000459CE /* Helpers */,
 				E938DD7324BBBEA1000459CE /* AppDelegate.swift */,
-				E938DD7524BBBEA1000459CE /* SceneDelegate.swift */,
-				E938DD7724BBBEA1000459CE /* MasterViewController.swift */,
-				E938DD7924BBBEA1000459CE /* DetailViewController.swift */,
-				E938DD7B24BBBEA1000459CE /* Main.storyboard */,
+				E938DDB424BBC356000459CE /* Extensions */,
 				E938DD7E24BBBEA2000459CE /* Assets.xcassets */,
-				E938DD8024BBBEA2000459CE /* LaunchScreen.storyboard */,
+				E938DD7524BBBEA1000459CE /* SceneDelegate.swift */,
 				E938DD8324BBBEA2000459CE /* Info.plist */,
+				E938DD8024BBBEA2000459CE /* LaunchScreen.storyboard */,
+				E938DD7B24BBBEA1000459CE /* Main.storyboard */,
 			);
 			path = "Note Application";
 			sourceTree = "<group>";
@@ -129,6 +149,58 @@
 				E938DD9924BBBEA2000459CE /* Info.plist */,
 			);
 			path = "Note ApplicationUITests";
+			sourceTree = "<group>";
+		};
+		E938DDA524BBBF51000459CE /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				E938DDAA24BBBFF1000459CE /* NoteDataModel.xcdatamodeld */,
+			);
+			path = CoreDataModel;
+			sourceTree = "<group>";
+		};
+		E938DDA624BBBF6B000459CE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E938DDB724BBC545000459CE /* Note.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E938DDA724BBBF7C000459CE /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E938DDAD24BBC00B000459CE /* NoteStorage.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		E938DDA924BBBF9A000459CE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				E938DDAF24BBC03C000459CE /* NoteDateHelper.swift */,
+				E938DDB224BBC051000459CE /* NoteCoreDataHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		E938DDB424BBC356000459CE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E938DDB524BBC373000459CE /* DateExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E938DDB924BBCC3B000459CE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E938DD7724BBBEA1000459CE /* MasterViewController.swift */,
+				E938DD7924BBBEA1000459CE /* DetailViewController.swift */,
+				E938DDBA24BBCC65000459CE /* NoteUITableViewCell.swift */,
+				E938DDBB24BBCC65000459CE /* NoteUITableViewCell.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +310,7 @@
 				E938DD8224BBBEA2000459CE /* LaunchScreen.storyboard in Resources */,
 				E938DD7F24BBBEA2000459CE /* Assets.xcassets in Resources */,
 				E938DD7D24BBBEA1000459CE /* Main.storyboard in Resources */,
+				E938DDBD24BBCC65000459CE /* NoteUITableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +338,14 @@
 				E938DD7424BBBEA1000459CE /* AppDelegate.swift in Sources */,
 				E938DD7624BBBEA1000459CE /* SceneDelegate.swift in Sources */,
 				E938DD7824BBBEA1000459CE /* MasterViewController.swift in Sources */,
+				E938DDBC24BBCC65000459CE /* NoteUITableViewCell.swift in Sources */,
+				E938DDB024BBC03C000459CE /* NoteDateHelper.swift in Sources */,
+				E938DDB324BBC051000459CE /* NoteCoreDataHelper.swift in Sources */,
+				E938DDB824BBC545000459CE /* Note.swift in Sources */,
+				E938DDB624BBC373000459CE /* DateExtensions.swift in Sources */,
 				E938DD7A24BBBEA1000459CE /* DetailViewController.swift in Sources */,
+				E938DDAC24BBBFF1000459CE /* NoteDataModel.xcdatamodeld in Sources */,
+				E938DDAE24BBC00B000459CE /* NoteStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +668,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E938DDAA24BBBFF1000459CE /* NoteDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E938DDAB24BBBFF1000459CE /* NoteDataModel.xcdatamodel */,
+			);
+			currentVersion = E938DDAB24BBBFF1000459CE /* NoteDataModel.xcdatamodel */;
+			path = NoteDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E938DD6824BBBEA1000459CE /* Project object */;
 }
